@@ -23,9 +23,6 @@ main();
 //-----------------------------------------
 function main () {
 
-    UltraEdit.outputWindow.write( "Debug : " );
-    UltraEdit.outputWindow.write( "     longueur  : " + UltraEdit.document.length );
-
     // Process the function only if document is not empty and lines are selected
     if (( UltraEdit.document.length > 0 ) && ( UltraEdit.activeDocument.isSel() )) {
         // Variables declaration
@@ -76,11 +73,9 @@ function main () {
             }
         }
 
-        // Set the previous column mode
+        // Restore column mode if was previous true
         if ( column_mode ) {
             UltraEdit.columnModeOn;
-        } else {
-            UltraEdit.columnModeOff;
         }
     }
 }
