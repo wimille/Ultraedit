@@ -48,6 +48,9 @@ function main() {
         // For Verilog/SystemVerilog files (extenstion : v or sv)
         } else if (UltraEdit.activeDocument.isExt("sv") || UltraEdit.activeDocument.isExt("v")) {
             line_comment = "//";
+        // For Javascript
+        } else if ( UltraEdit.activeDocument.isExt("js")) {
+            line_comment = "//";
         }
 
         // Construct line
