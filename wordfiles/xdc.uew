@@ -1,0 +1,28 @@
+/L23"XDC" Line Comment = # Nocase String Chars = " File Extensions = xdc
+/Delimiters = ();[]{}
+/Regexp Type = Perl
+
+/C1"XDC commands"
+create_clock create_generated_clock
+set_clock_groups set_max_delay set_property
+
+/C2"XDC command options"
+get_ports get_pins get_clocks
+
+/C3"XDC command parameter"
+-asynchronous
+-dict -divide_by
+-from
+-group
+-include_generated_clocks
+-name
+-period
+-source
+-to
+-waveform
+
+/C4"XDC parameters for pinout"
+DRIVE
+IOSTANDARD
+PACKAGE_PIN
+SLEW

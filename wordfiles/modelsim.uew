@@ -1,0 +1,30 @@
+/L22"ModelSim" Line Comment = # Nocase String Chars = " File Extensions = DO
+/Delimiters = ,();
+/Regexp Type = Perl
+/C1"ModelSim commands"
+coverage
+dataset
+vcom vcover vlib vlog vmap vsim
+/C2"ModelSim command options"
+attribute
+close
+merge
+open
+reload report restart
+save
+/C3"ModelSim command parameter"
+-all
+-byinstance
+-code
+-detail
+-instance
+-f -file
+-lines
+-name
+-out -output
+-recursive
+-select
+-test -totals
+-value -viewcov
+-work
+-zeros

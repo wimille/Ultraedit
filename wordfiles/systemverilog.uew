@@ -1,12 +1,14 @@
 /L20"SystemVerilog" Line Comment = // Block Comment On = /* Block Comment Off = */ String Chars = " File Extensions = SV SVH
+/TGBegin "Function"
+/TGFindStr = "%[a-z0-9]+[ ^t]+[a-z_0-9]+[ ^t]+("
+/TGFindStr = "%[ ^t]++^(config[ ^t^p]+[a-zA-Z0-9_]+^)"
+/TGFindStr = "%[ ^t]++^(module[ ^t^p]+[a-zA-Z0-9_]+^)[ ^t^p]++[(;#]"
+/TGFindStr = "%[ ^t]++^(task[ ^t^p]+[~(;]+^)[ ^t^p]++[(;#]"
+/TGFindStr = "%[ ^t]++^(function[ ^t^p]+[~(;]+^)[ ^t^p]++[(;#]"
+/TGFindStr = "%[ ^t]++^(primitive[ ^t^p]+[~(;]+^)[ ^t^p]++[(;#]"
+/TGFindStr = "begin[ ^t^p]++^(:[ ^t^p]++[a-zA-Z0-9_]+^)"
+/TGEnd
 /Delimiters = ~!@%^&*()-+=|\/{}[]:;"<> ,	.?#
-/Function String = "%[a-z0-9]+[ ^t]+[a-z_0-9]+[ ^t]+("
-/Function String = "%[ ^t]++^(config[ ^t^p]+[a-zA-Z0-9_]+^)"
-/Function String 1 = "%[ ^t]++^(module[ ^t^p]+[a-zA-Z0-9_]+^)[ ^t^p]++[(;#]"
-/Function String 2 = "%[ ^t]++^(task[ ^t^p]+[~(;]+^)[ ^t^p]++[(;#]"
-/Function String 3 = "%[ ^t]++^(function[ ^t^p]+[~(;]+^)[ ^t^p]++[(;#]"
-/Function String 4 = "%[ ^t]++^(primitive[ ^t^p]+[~(;]+^)[ ^t^p]++[(;#]"
-/Function String 5 = "begin[ ^t^p]++^(:[ ^t^p]++[a-zA-Z0-9_]+^)"
 /Indent Strings = "begin" "case" "fork" "specify" "table" "config" "case" "generate"
 /Unindent Strings = "end" "endcase" "join" "endspecify" "endtable" "endconfig" "endcase" "endgenerate"
 /Open Fold Strings =  "class"    "module"    "task"    "function"    "generate"    "primitive"    "begin" "case"    "fork" "specify"    "table"    "config"    "`ifdef" "`ifndef" "`elsif"

@@ -1,15 +1,21 @@
 /L20"Verilog 1364-2001" Line Comment = // Block Comment On = /* Block Comment Off = */ Block Comment On Alt = (* Block Comment Off Alt = *) String Chars = " File Extensions = V VL VMD
-/TGBegin "Function"
-/TGFindStr = "%[ ^t]++^(config[ ^t^p]+[a-zA-Z0-9_]+^)"
-/TGFindStr = "%[ ^t]++^(function[ ^t^p]+[~(;]+^)[ ^t^p]++[(;#]"
-/TGFindStr = "%[ ^t]++^(primitive[ ^t^p]+[~(;]+^)[ ^t^p]++[(;#]"
-/TGFindStr = "begin[ ^t^p]++^(:[ ^t^p]++[a-zA-Z0-9_]+^)"
+/TGBegin "Config"
+/TGFindStr = "^[\t ]*(config)\s+([0-9a-z_]+)"
 /TGEnd
-/TGBegin "Tasks"
-/TGFindStr = "%[ ^t]++task^([ ^t^p]+[~(;]+^)[ ^t^p]++[(;#]"
+/TGBegin "Module"
+/TGFindStr = "^[\t ]*module\s+([0-9a-z_]+)\s*[(;#]"
 /TGEnd
-/TGBegin "Modules"
+/TGBegin "Task/Function"
+/TGFindStr = "^[\t ]*(task|function|primitive)\s+([^(;#]+?)[(;#]"
 /TGEnd
+/TGBegin "Process"
+/TGFindStr = "begin\s*:\s*([0-9a-z_]+)"
+/TGEnd
+/TGBegin "Instances"
+/TGFindStr = "^[\t ]*[a-z_][0-9a-z_]*[\t ]+(i_[0-9a-z_]+)[\t ]*#*\("
+/TGFindStr = "^\)\s*(i_\w+)\s*\("
+/TGEnd
+/Regexp Type = Perl
 /Delimiters = ~!@%^&*()-+=|\/{}[]:;"<> ,	#
 /Indent Strings = "begin" "case" "fork" "specify" "table" "config"
 /Unindent Strings = "end" "endcase" "join" "endspecify" "endtable" "endconfig"
