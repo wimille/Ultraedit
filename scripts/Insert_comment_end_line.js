@@ -54,6 +54,9 @@ function main() {
         // For Text files (extension : txt)
         } else if (UltraEdit.activeDocument.isExt("txt")) {
             line_term = "#";
+        // For Verilog files (extension : v) or for System Verilog files (extension : sv)
+        } else if (UltraEdit.activeDocument.isExt("v") || UltraEdit.activeDocument.isExt("sv"))  {
+            line_term = "--";
         // Default case
         } else {
             line_term = "#";
